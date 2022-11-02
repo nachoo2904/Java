@@ -78,29 +78,18 @@ public class Biblioteca {
 	public void librosPorGeneroLiterario() {
 
 		Genero[] generos = Genero.values();
-		int cantidades[] = { 0, 0, 0, 0, 0, 0 };
+		int cantidades[] = new int [generos.length];
 
-		for (int i = 0; i < libros.length; i++) {
-			for (int j = 0; j < 6; j++) {
-				if (libros[i].getGenero() == generos[j])
-					cantidades[j]++;
-				if (j == generos.length)
-					j = 0;
-			}
+		for (int i = 0; i < cantidadDeLibros; i++) {
+			cantidades[libros[i].getGenero().ordinal()]++;
 		}
-
-		for (int i = 0; i < 6; i++) {
-			System.out.println(generos[i] + ": " + cantidades[i]);
+		
+		for (int i = 0; i < generos.length; i++) {
+			if (cantidades[i] != 0)
+				System.out.println(generos[i] + " " + cantidades[i]);
 		}
+		
 	}
 
-	public static void main(String[] args) {
-
-		Biblioteca juan = new Biblioteca(1);
-
-		juan.agregarLibro("aa", "pedro", Genero.HISTORIA, 25);
-		juan.librosPorGeneroLiterario();
-
-	}
 
 }
