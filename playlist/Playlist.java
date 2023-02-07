@@ -93,9 +93,9 @@ public class Playlist {
 		rock.agregarCancion("Gustavo Cerati", "Adios",  416);
 		rock.agregarCancion("Gustavo Cerati", "Crimen",  223);
 		rock.agregarCancion("Luis Alberto Spinetta", "Bajan", 249);
-		System.out.println(chill.getCantidadDeCanciones());
-		System.out.println(chill.cancionDeMayorDuracion());
-		System.out.println(chill.cancionEnLaPosicion(2));
+		System.out.println(rock.getCantidadDeCanciones());
+		System.out.println(rock.cancionDeMayorDuracion());
+		System.out.println(rock.cancionEnLaPosicion(2));
 		
 		for (Cancion c : rock.cancionesDelInterprete("Gustavo Cerati")) {
 			System.out.println(c);
