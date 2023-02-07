@@ -3,19 +3,19 @@ package fizzBuzz;
 public class FizzBuzz {
 
 	public static String divisible (int i) {
-		String fisbas;
-		fisbas = null;
+		String fb;
+		fb = null;
 		
 		if (i % 15 == 0)
-			fisbas = "FizzBuzz";
+			fb = "FizzBuzz";
 		
 		else if (i % 3 == 0)
-			fisbas = "Fizz";
+			fb = "Fizz";
 		
 		else if (i % 5 == 0)
-			fisbas = "Buzz";
+			fb = "Buzz";
 		
-		return fisbas;
+		return fb;
 	}
 	
 	public static void main(String[] args) {
